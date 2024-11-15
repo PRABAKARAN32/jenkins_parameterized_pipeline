@@ -28,7 +28,7 @@ pipeline {
         echo "Kubernetes Push"
         }
       }
-      stage("Deployment to Test Server"){
+      stage("Deployment to Production Server"){
         script{
         steps{
         echo "Deploying in the Server..."
