@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     stages {   
-        stage('Test') {
+        stage('Production') {
             steps {
                 script{
                     sh "cd /var/lib/jenkins/jenkins_parameterized_pipeline"
