@@ -2,6 +2,12 @@ pipeline {
     agent any
 
     stages {
+        stage('Maven Version') {
+         steps{   
+            sh"sudo apt install maven"
+            sh "mvn --version"
+        }
+        }
         stage('Test') {
           script{
             steps {
