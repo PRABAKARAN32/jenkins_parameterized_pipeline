@@ -5,6 +5,9 @@ pipeline {
         stage('Test') {
             steps {
                 script{
+                    sh "sudo apt update -y"
+                    sh "sudo apt upgrade -y"
+                    sh "sudo apt install maven"
                     sh "mvn --version"
                     sh "cd /var/lib/jenkins/jenkins_parameterized_pipeline"
                     sh "python3 hello.py"
