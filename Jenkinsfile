@@ -3,8 +3,8 @@ pipeline {
 
     stages {
         stage('Test') {
-          script{
-            steps {
+          steps {
+            script{
               sh "cd /var/lib/jenkins/jenkins_parameterized_pipeline"
               sh "python3 hello.py"
               for(int i=0;i<5;i++){
@@ -29,12 +29,12 @@ pipeline {
         }
       }
       stage("Deployment to Production Server"){
-        script{
         steps{
-        echo "Deploying in the Server..."
-        for(int i=0;i<5;i++){
-           echo "Level ${i+1}"
-           sleep 1
+          script{
+            echo "Deploying in the Server..."
+            for(int i=0;i<5;i++){
+               echo "Level ${i+1}"
+               sleep 1
           }
         echo "Deployed to Server"
         echo "Build Successful"
