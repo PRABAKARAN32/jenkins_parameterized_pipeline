@@ -9,7 +9,7 @@ pipeline {
                     sh "sudo apt upgrade -y"
                     sh "sudo apt install maven -y"
                     sh "mvn --version"
-                    sh "cd /var/lib/jenkins/jenkins_parameterized_pipeline"
+                    sh "cd /var/lib/jenkins/workspace/jenkins_parameterized_pipeline/"
                     sh "python3 hello.py"
                     for(int i=0;i<5;i++){
                         echo "Level ${i+1}"
